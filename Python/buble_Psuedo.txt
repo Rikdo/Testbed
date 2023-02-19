@@ -1,0 +1,16 @@
+def sort (list, sorted)
+	if sorted = length of list
+		return list
+	else
+		marker = 0
+		space = 0
+		while marker is less than length of list:
+			space = list[marker]
+			if list[marker] > list[marker + 1]
+				list[marker] = list[marker + 1]
+				list[marker +1] = space
+				sorted = 0
+			else 
+				sorted++
+			marker++
+		return sort(list, sorted)
