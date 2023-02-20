@@ -1,0 +1,14 @@
+Resolution
+When records get created into Salesforce following Order of execution works:
+
+1. System Validation Rules
+2. Apex Before Triggers
+3. Custom Validation Rules
+4. Duplicate Rules
+5. Apex After Triggers
+6. Assignment Rules
+7. Auto-Response Rules
+8. Workflow Rules
+9. Processes
+10. Escalation Rules
+11. Roll-Up Summary Fields
