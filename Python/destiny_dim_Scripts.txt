@@ -1,0 +1,1 @@
+is:armor -is:classitem -is:exotic -basestat:any:>=20 -basestat:total:>=60

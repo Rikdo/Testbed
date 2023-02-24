@@ -89,3 +89,17 @@ select round(sqrt(
     pow(max(lat_n)-min(lat_n),2) +
     pow(max(long_w)-min(long_w),2) ),4)
 from station
+
+--Triangles
+SELECT 
+    CASE
+        WHEN A + B <= C OR A + C <= B OR B + C <= A
+            THEN 'Not A Triangle'
+        WHEN A = B AND A = C 
+            THEN 'Equilateral'
+        WHEN (A = B AND B != C) OR (A != B AND B = C)
+            THEN 'Isosceles'
+        WHEN A != B AND A != C AND B != C
+            THEN 'Scalene'
+    END AS 'Output'
+FROM TRIANGLES;
