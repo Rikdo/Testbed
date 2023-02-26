@@ -38,6 +38,9 @@ order by name asc
 select name from employee
 where salary > 2000 and months < 10
 order by employee_id asc
+--Japanese Cities' Names
+select name from city
+where countrycode = "JPN"
 
 
 --Aggregation
@@ -90,7 +93,7 @@ select round(sqrt(
     pow(max(long_w)-min(long_w),2) ),4)
 from station
 
---Triangles
+--Types of Triangles
 SELECT 
     CASE
         WHEN (A + B <= C) OR (A + C <= B) OR (B + C <= A) THEN 'Not A Triangle'
