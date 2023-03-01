@@ -105,3 +105,13 @@ ORDER BY Doctor, Professor, Singer, Actor
             FROM Occupations AS a
             ORDER BY a.Occupation, a.Name ) as tmp
         GROUP BY tmp.Rank_num
+
+--Binary Tree Nodes
+SELECT N, 
+    CASE
+        WHEN ISNULL(P) THEN "Root"
+        WHEN N IN (SELECT P FROM BST) THEN "Inner"
+        ELSE "Leaf"
+    END AS Node_Type
+FROM BST
+ORDER BY N
