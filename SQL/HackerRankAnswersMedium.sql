@@ -1,5 +1,4 @@
---Advanced Select
---The Pads
+--Advanced Select: The Pads
 ----------------------------------------------------------------
 --After several attempts and refferencing comments from other users, I believe there is an error in the compiler check for this problem.
 --The compiler outputs the first query as needed, but outputs the second query with it's collumn header inline.  
@@ -59,7 +58,7 @@ ORDER BY Count(Occupation), Occupation;
             GROUP BY COUNT(*) Occupation) AS T
         ORDER BY C2, Occupation, C1;
 
---Occupations
+--Advanced Select: Occupations
 SELECT 
     CASE WHEN Occupation LIKE "D%" THEN Name END AS Doctor,
     CASE WHEN Occupation LIKE "P%" THEN Name END AS Professor,
@@ -106,7 +105,7 @@ ORDER BY Doctor, Professor, Singer, Actor
             ORDER BY a.Occupation, a.Name ) as tmp
         GROUP BY tmp.Rank_num
 
---Binary Tree Nodes
+--Advanced Select: Binary Tree Nodes
 SELECT N, 
     CASE
         WHEN ISNULL(P) THEN "Root"
@@ -115,3 +114,19 @@ SELECT N,
     END AS Node_Type
 FROM BST
 ORDER BY N
+
+--Advanced Select: New Companies 
+SELECT C.company_code, C.founder, E.LM, E.SM, E.MM, E.EM
+FROM
+    (SELECT company_code, founder
+    FROM Company) AS C
+    LEFT JOIN
+    (SELECT company_code, 
+        COUNT(DISTINCT lead_manager_code) AS LM, 
+        COUNT(DISTINCT senior_manager_code) AS SM,
+        COUNT(DISTINCT manager_code) AS MM,
+        COUNT(DISTINCT employee_code) AS EM
+    FROM Employee
+    GROUP BY company_code) AS E
+    ON C.company_code = E.company_code
+ORDER BY C.company_code
