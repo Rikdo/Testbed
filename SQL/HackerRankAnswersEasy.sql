@@ -104,3 +104,40 @@ SELECT
         END
     END AS "Output"
 FROM TRIANGLES;
+
+--Revising Aggregations - The Sum Function
+SELECT SUM(POPULATION)
+FROM CITY
+WHERE DISTRICT = "California"
+
+--Revising Aggregations - The Count Function
+SELECT COUNT(*)
+FROM CITY
+WHERE POPULATION > 100000
+
+--Revising Aggregations - Averages
+SELECT AVG(POPULATION)
+FROM CITY
+WHERE DISTRICT = "California"
+
+--Average Population
+SELECT ROUND(AVG(POPULATION),0)
+FROM CITY
+
+--JAPAN Population
+SELECT SUM(POPULATION)
+FROM CITY
+WHERE COUNTRYCODE = "JPN"
+
+--Population Density Difference
+SELECT MAX(POPULATION)-MIN(POPULATION)
+FROM CITY
+
+
+-- Basic Join
+----------------------------------------------------------------
+-- Population Census
+SELECT SUM(CITY.POPULATION)
+FROM CITY
+LEFT JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
+WHERE COUNTRY.CONTINENT = "Asia"
