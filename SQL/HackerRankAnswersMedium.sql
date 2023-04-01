@@ -1,3 +1,20 @@
+--Basic Join: The Report
+SELECT  CASE
+            WHEN Students.Marks < 70 THEN NULL
+            ELSE Students.Name
+        END AS Name, 
+        Grades.Grade AS Grade, 
+        Students.Marks AS Mark
+FROM Students
+LEFT JOIN Grades ON Students.Marks BETWEEN Grades.Min_Mark AND Grades.Max_Mark
+ORDER BY Grade DESC, Name ASC, Mark ASC
+
+--BASIC JOIN: Top Competitors
+SELECT Hackers.hacker_id, Hackers.name
+FROM Hackers
+LEFT JOIN Submissions ON 
+ORDER BY SUM(~~Full scores) DESC, Hackers.hacker_id ASC
+
 --Advanced Select: The Pads
 ----------------------------------------------------------------
 --After several attempts and refferencing comments from other users, I believe there is an error in the compiler check for this problem.
