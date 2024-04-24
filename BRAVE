@@ -1,6 +1,16 @@
 title: BRAVE Arsenal from Into the Light
 description:Recommendations for the new Into the Light weapons based on blueberries.gg
 
+// Falling Guillotine (PvE)
+//notes:Dash PvE-
+dimwishlist:item=243425374&perks=3666208348,269888150,4104185692,2077819806
+dimwishlist:item=243425374&perks=3666208348,269888150,4104185692,3708227201
+dimwishlist:item=243425374&perks=3666208348,269888150,4104185692,3078487919
+dimwishlist:item=243425374&perks=3666208348,269888150,1749209109,3078487919
+dimwishlist:item=243425374&perks=3666208348,269888150,1749209109,2077819806
+dimwishlist:item=243425374&perks=3666208348,269888150,1749209109,3708227201
+
+
 // Hung Jury SR4 (PvE)
 //notes:Dash PvE-Handling and Reload Speed are important on Hung Jury, so we chose Fluted Barrel and Tactical Magazine for our barrel and magazine slots.  Kinetic Tremors is a brilliant AoE perk and synergizes nicely with Precision Instrument as both perks require hits for their perks to activate, meaning you will have mounting damage from Precision Instrument while also having some AoE damage with Kinetic Tremors. Firefly is another option for even more AoE, but some players may consider this a bit unnecessary.
 dimwishlist:item=205225492&perks=1840239774,106909392,3891536761,3824105627
